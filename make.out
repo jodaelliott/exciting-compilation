@@ -1,0 +1,163 @@
+cd build/mpi; make
+make[1]: Entering directory '/mnt/lustre/a2fs-tdswork1/work/e772/e772/jdeconexs/EXCITING/code/exciting-fluorine/build/mpi'
+make  -f ../Make.common
+make[2]: Entering directory '/mnt/lustre/a2fs-tdswork1/work/e772/e772/jdeconexs/EXCITING/code/exciting-fluorine/build/mpi'
+../../build/utilities/mkmf -t ./template -f -m Makefile.libbzint -p libbzint.a \
+../../src/src_libbzint \
+&& make -f Makefile.libbzint libbzint.a 
+...................................................................... Makefile.libbzint is ready.
+make[3]: Entering directory '/mnt/lustre/a2fs-tdswork1/work/e772/e772/jdeconexs/EXCITING/code/exciting-fluorine/build/mpi'
+make[3]: 'libbzint.a' is up to date.
+make[3]: Leaving directory '/mnt/lustre/a2fs-tdswork1/work/e772/e772/jdeconexs/EXCITING/code/exciting-fluorine/build/mpi'
+../../build/utilities/mkmf -t ./template -f -m Makefile.fft -p fftlib.a \
+../../src/fftlib\
+&& make -f Makefile.fft fftlib.a 
+... Makefile.fft is ready.
+make[3]: Entering directory '/mnt/lustre/a2fs-tdswork1/work/e772/e772/jdeconexs/EXCITING/code/exciting-fluorine/build/mpi'
+make[3]: 'fftlib.a' is up to date.
+make[3]: Leaving directory '/mnt/lustre/a2fs-tdswork1/work/e772/e772/jdeconexs/EXCITING/code/exciting-fluorine/build/mpi'
+../../build/utilities/mkmf -t ./template.f77 -f -m Makefile.libmsec -p libmsec.a \
+../../src/src_mixing/lib/ \
+&& make -f Makefile.libmsec libmsec.a 
+........ Makefile.libmsec is ready.
+make[3]: Entering directory '/mnt/lustre/a2fs-tdswork1/work/e772/e772/jdeconexs/EXCITING/code/exciting-fluorine/build/mpi'
+make[3]: 'libmsec.a' is up to date.
+make[3]: Leaving directory '/mnt/lustre/a2fs-tdswork1/work/e772/e772/jdeconexs/EXCITING/code/exciting-fluorine/build/mpi'
+cd ../../external/leblaiklib && make
+make[3]: Entering directory '/mnt/lustre/a2fs-tdswork1/work/e772/e772/jdeconexs/EXCITING/code/exciting-fluorine/external/leblaiklib'
+ar -rc leblaiklib.a Lebedev-Laikov.o leblaik.o
+make[3]: Leaving directory '/mnt/lustre/a2fs-tdswork1/work/e772/e772/jdeconexs/EXCITING/code/exciting-fluorine/external/leblaiklib'
+cp ../../external/leblaiklib/leblaiklib.a ./
+cd ../../external/Lbfgsb.3.0 && make
+make[3]: Entering directory '/mnt/lustre/a2fs-tdswork1/work/e772/e772/jdeconexs/EXCITING/code/exciting-fluorine/external/Lbfgsb.3.0'
+ar -rc liblbfgs.a lbfgsb.o linpack.o timer.o
+make[3]: Leaving directory '/mnt/lustre/a2fs-tdswork1/work/e772/e772/jdeconexs/EXCITING/code/exciting-fluorine/external/Lbfgsb.3.0'
+cp ../../external/Lbfgsb.3.0/liblbfgs.a ./
+perl ../../build/utilities/versionstamp.pl 
+readline() on closed filehandle $HEADREF at ../../build/utilities/versionstamp.pl line 14.
+readline() on closed filehandle $REFS at ../../build/utilities/versionstamp.pl line 41.
+Compiler type could not be established from build/make.inc 
+Please ensure FC = 'ifort' or 'gfortran', or update build/utilities/versionstamp.pl 
+../../build/utilities/mkmf -t ./template -f -m Makefile.mkmf\
+         -p exciting ../../src/math ../../src/testframework ../../src/ ../../src/simplified_input ../../src/lapack_wrappers ../../src/lapack_wrappers/f95_interfaces ../../src/lapack_wrappers/multiplication ../../src/lapack_wrappers/decomposition ../../src/lapack_wrappers/diagonalization ../../src/lapack_wrappers/utils ../../src/lapack_wrappers/tensor_contraction ../../src/char_utils ../../src/writers ../../src/structure ../../src/src_advanced/ ../../src/constants ../../src/src_eigensystem/ ../../src/errors_warnings ../../src/char_utils ../../src/src_fermisurfdx/ ../../src/src_gw/ ../../src/src_gw/src_vxc ../../src/src_gw/src_tests ../../src/src_hybrids/ ../../src/input ../../src/src_inputparser/ ../../src/src_LDAU/ ../../src/src_lib/ ../../src/src_lib/bessel ../../src/math ../../src/src_mixing/ ../../src/src_mpi/ ../../src/src_mpi/routines/ ../../src/src_mpi/serial/ ../../src/src_optics/ ../../src/src_phonon/ ../../src/src_raman/ ../../src/src_rdmft/ ../../src/src_stm/ ../../src/src_sym/ ../../src/testframework ../../src/src_vdW/ ../../src/src_wannier ../../src/src_xc/ ../../src/src_xml/ ../../src/src_xs/ ../../src/src_xs/modtetra ../../src/src_xs/src_rttddft ../../src/wavefunctions ../../src/sirius ../../src/read ../../src/potential ../../src/file_io ../../src/matrix_elements ../../src/dfpt ../../external/libXC/src/libxc.f90 ../../external/libXC/src/libxc_funcs.f90 ../../src/mainxml/\
+         && make -f Makefile.mkmf exciting
+.......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................... Makefile.mkmf is ready.
+make[3]: Entering directory '/mnt/lustre/a2fs-tdswork1/work/e772/e772/jdeconexs/EXCITING/code/exciting-fluorine/build/mpi'
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_gw/calcselfc_freqconv.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/mod_linalg.f90
+../../src/mod_linalg.f90:1059:60:
+
+ 1047 |         call dgemm( 'n', 'n', m, m, m, 1.d0, cpy, m, tmp, m, 0.d0, tmp2, m)
+      |                                                          2  
+......
+ 1059 |         call dgemm( 'n', 'n', m, m, m, 1.d0, expm, m, expm, 0.d0, tmp, m)
+      |                                                            1
+Warning: Type mismatch between actual argument at (1) and actual argument at (2) (REAL(8)/INTEGER(4)).
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_wannier/mod_wannier_helper.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_wannier/mod_wannier_projection.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_wannier/mod_wannier_omega.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_lib/mod_manopt_manifolds.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_lib/mod_manopt_solvers.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_lib/mod_manopt.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_wannier/mod_wannier_maxloc.f90
+../../src/src_wannier/mod_wannier_maxloc.f90:86:57:
+
+   86 |         write( convfname, '("maxloc_conv_",i3.3,".dat")'), wf_group
+      |                                                         1
+Warning: Legacy Extension: Comma before i/o item list at (1)
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_wannier/mod_wannier_opf.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_wannier/mod_wannier_disentangle.f90
+../../src/src_wannier/mod_wannier_disentangle.f90:123:54:
+
+  123 |         write( convfname, '("dis_conv_",i3.3,".dat")'), wf_group
+      |                                                      1
+Warning: Legacy Extension: Comma before i/o item list at (1)
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_wannier/mod_wannier.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_wannier/mod_wannier_interpolate.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_wannier/mod_wannier_bse.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_xs/modbse.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_xs/checkevalqp.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_gw/calcselfeph.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_gw/calcrlamint.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_xs/m_setup_dmat.f90
+ftn    -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_xs/xsgauntgen.F90
+ftn    -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_xs/m_write_hdf5.F90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_xs/m_putgetbsemat.f90
+../../src/src_xs/m_putgetbsemat.f90:436:22:
+
+  434 |         call mpi_send(buffer, size(buffer), mpi_integer, 0,&
+      |                      2
+  435 |           & tag*2, mpiglobal%comm, mpiglobal%ierr)
+  436 |         call mpi_send(zmat, size(zmat), mpi_double_complex, 0,&
+      |                      1
+Warning: Type mismatch between actual argument at (1) and actual argument at (2) (COMPLEX(8)/INTEGER(4)).
+../../src/src_xs/m_putgetbsemat.f90:450:26:
+
+  448 |             call mpi_recv(buffer, size(buffer), mpi_integer, iproc, tag*2,&
+      |                          2
+  449 |               & mpiglobal%comm, stat, mpiglobal%ierr)
+  450 |             call mpi_recv(zmat_buffer, size(zmat_buffer), mpi_double_complex, iproc, tag,&
+      |                          1
+Warning: Type mismatch between actual argument at (1) and actual argument at (2) (COMPLEX(8)/INTEGER(4)).
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_xs/phonon_screening.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_xs/mod_variation.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_xs/scrcoulint.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_gw/task_gw.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_phonon/phonons_util.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/dfpt/phonons_symmetry.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/dfpt/phonons_parallelization.f90
+../../src/dfpt/phonons_parallelization.f90:360:28:
+
+  357 |           call MPI_Gatherv( MPI_IN_PLACE, rlen(mpi%rank), MPI_DOUBLE_COMPLEX, data, rlen, roff, MPI_DOUBLE_COMPLEX, &
+      |                            2
+......
+  360 |           call MPI_Gatherv( data, rlen(mpi%rank), MPI_DOUBLE_COMPLEX, data, rlen, roff, MPI_DOUBLE_COMPLEX, &
+      |                            1
+Warning: Type mismatch between actual argument at (1) and actual argument at (2) (COMPLEX(8)/INTEGER(4)).
+../../src/dfpt/phonons_parallelization.f90:368:27:
+
+  365 |           call MPI_Gather( MPI_IN_PLACE, rlen(0), MPI_DOUBLE_COMPLEX, data, rlen(0), MPI_DOUBLE_COMPLEX, &
+      |                           2
+......
+  368 |           call MPI_Gather( data, rlen(0), MPI_DOUBLE_COMPLEX, data, rlen(0), MPI_DOUBLE_COMPLEX, &
+      |                           1
+Warning: Type mismatch between actual argument at (1) and actual argument at (2) (COMPLEX(8)/INTEGER(4)).
+../../src/dfpt/phonons_parallelization.f90:318:67:
+
+  315 |           call MPI_Scatterv( data, rlen, roff, MPI_DOUBLE_COMPLEX, MPI_IN_PLACE, rlen(mpi%rank), MPI_DOUBLE_COMPLEX, &
+      |                                                                   2
+......
+  318 |           call MPI_Scatterv( data, rlen, roff, MPI_DOUBLE_COMPLEX, data, rlen(mpi%rank), MPI_DOUBLE_COMPLEX, &
+      |                                                                   1
+Warning: Type mismatch between actual argument at (1) and actual argument at (2) (COMPLEX(8)/INTEGER(4)).
+../../src/dfpt/phonons_parallelization.f90:326:63:
+
+  323 |           call MPI_Scatter( data, rlen(0), MPI_DOUBLE_COMPLEX, MPI_IN_PLACE, rlen(0), MPI_DOUBLE_COMPLEX, &
+      |                                                               2
+......
+  326 |           call MPI_Scatter( data, rlen(0), MPI_DOUBLE_COMPLEX, data, rlen(0), MPI_DOUBLE_COMPLEX, &
+      |                                                               1
+Warning: Type mismatch between actual argument at (1) and actual argument at (2) (COMPLEX(8)/INTEGER(4)).
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/dfpt/phonons_variables.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_hybrids/mod_hybrids.f90
+ftn    -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_xs/writepmatxs.F90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_gw/calcmpwipw.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/matrix_elements/matrix_elements_test.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/matrix_elements/matrix_elements_test_drivers.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_gw/getpmatkgw.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_xs/dielectric_matrix_type.f90
+ftn    -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_xs/kernxc_bse.F90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_gw/sigma.f90
+ftn  -O3 -march=native -ffree-line-length-0 -fallow-argument-mismatch -fallow-invalid-boz  -cpp -DXS -DISO -DLIBXC -DMPI -D_HDF5_ -Ifinclude   -c	../../src/src_gw/task_epsilon.f90
+../../src/src_gw/task_epsilon.f90:163:67:
+
+  163 |         &               epsilon_(1,1,1,iq),(/matsizmax,matsizmax,1:freq%nomeg/))
+      |                                                                   1
+Error: Syntax error in array constructor at (1)
+make[3]: *** [Makefile.mkmf:1886: task_epsilon.o] Error 1
+make[3]: Leaving directory '/mnt/lustre/a2fs-tdswork1/work/e772/e772/jdeconexs/EXCITING/code/exciting-fluorine/build/mpi'
+make[2]: *** [../Make.common:79: bin] Error 2
+make[2]: Leaving directory '/mnt/lustre/a2fs-tdswork1/work/e772/e772/jdeconexs/EXCITING/code/exciting-fluorine/build/mpi'
+make[1]: *** [Makefile:6: all] Error 2
+make[1]: Leaving directory '/mnt/lustre/a2fs-tdswork1/work/e772/e772/jdeconexs/EXCITING/code/exciting-fluorine/build/mpi'
+make: *** [Makefile:26: mpi] Error 2
